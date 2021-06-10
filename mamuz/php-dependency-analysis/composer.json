@@ -1,0 +1,64 @@
+{
+    "name": "mamuz/php-dependency-analysis",
+    "type": "project",
+    "description": "Static code analysis to find violations in a dependency graph",
+    "homepage": "https://github.com/mamuz/PhpDependencyAnalysis",
+    "license": "MIT",
+    "keywords": [
+        "phpda",
+        "dependency",
+        "analysis",
+        "graph",
+        "architecture"
+    ],
+    "authors": [
+        {
+            "name": "Marco Muths",
+            "email": "mamuz.de@gmail.com"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/mamuz/PhpDependencyAnalysis/issues",
+        "source": "https://github.com/mamuz/PhpDependencyAnalysis"
+    },
+    "config": {
+        "optimize-autoloader": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": "^7.3",
+        "ext-json": "*",
+        "psr/log": "~1.0",
+        "nikic/php-parser": "~4.0",
+        "clue/graph": "~0.8",
+        "graphp/algorithms": "~0.8.1",
+        "graphp/graphviz": "~0.2.0",
+        "phpdocumentor/reflection-docblock": "~4.0",
+        "doctrine/collections": "~1.0",
+        "symfony/yaml": "~4.2",
+        "symfony/console": "~4.2",
+        "symfony/finder": "~4.2"
+    },
+    "require-dev": {
+        "ext-simplexml": "*",
+        "mockery/mockery": "~1.2",
+        "codeception/codeception": "^2.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "PhpDA\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "PhpDATest\\": "tests/unit/"
+        }
+    },
+    "bin": [
+        "bin/phpda"
+    ],
+    "scripts": {
+        "test": "./vendor/bin/codecept run"
+    }
+}
